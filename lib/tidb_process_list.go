@@ -10,8 +10,8 @@ import (
 	"os"
 	"strings"
 
-	mp "github.com/mackerelio/go-mackerel-plugin"
 	"github.com/go-sql-driver/mysql"
+	mp "github.com/mackerelio/go-mackerel-plugin"
 )
 
 var knownStates = map[string]bool{
@@ -31,33 +31,33 @@ var knownCommands = map[string]bool{
 }
 
 var stmtTypeGroups = map[string]string{
-	"Select":           "Select",
-	"PointGet":         "Select",
-	"BatchPointGet":    "Select",
-	"Insert":           "Insert",
-	"Replace":          "Insert",
-	"ImportInto":       "Insert",
-	"Update":           "Update",
-	"Delete":           "Delete",
-	"AlterTable":       "DDL",
-	"AnalyzeTable":     "DDL",
-	"CompactTable":     "DDL",
-	"CreateDatabase":   "DDL",
-	"CreateIndex":      "DDL",
-	"CreateTable":      "DDL",
-	"CreateView":       "DDL",
-	"CreateUser":       "DDL",
-	"DropDatabase":     "DDL",
-	"DropIndex":        "DDL",
-	"DropTable":        "DDL",
-	"DropView":         "DDL",
-	"TruncateTable":    "DDL",
-	"SplitRegion":      "DDL",
-	"FlashBackTable":   "DDL",
-	"RecoverTable":     "DDL",
-	"Begin":            "Transaction",
-	"Commit":           "Transaction",
-	"Rollback":         "Transaction",
+	"Select":         "Select",
+	"PointGet":       "Select",
+	"BatchPointGet":  "Select",
+	"Insert":         "Insert",
+	"Replace":        "Insert",
+	"ImportInto":     "Insert",
+	"Update":         "Update",
+	"Delete":         "Delete",
+	"AlterTable":     "DDL",
+	"AnalyzeTable":   "DDL",
+	"CompactTable":   "DDL",
+	"CreateDatabase": "DDL",
+	"CreateIndex":    "DDL",
+	"CreateTable":    "DDL",
+	"CreateView":     "DDL",
+	"CreateUser":     "DDL",
+	"DropDatabase":   "DDL",
+	"DropIndex":      "DDL",
+	"DropTable":      "DDL",
+	"DropView":       "DDL",
+	"TruncateTable":  "DDL",
+	"SplitRegion":    "DDL",
+	"FlashBackTable": "DDL",
+	"RecoverTable":   "DDL",
+	"Begin":          "Transaction",
+	"Commit":         "Transaction",
+	"Rollback":       "Transaction",
 }
 
 var stmtGroups = []string{"Select", "Insert", "Update", "Delete", "DDL", "Transaction", "Other"}
