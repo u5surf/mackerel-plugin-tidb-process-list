@@ -8,10 +8,9 @@ builds:
       - amd64
       - arm64
 archives:
-  - formats:
-      - zip
+  - format: zip
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
 release:
   github:
-    owner: mackerelio
+    owner: u5surf
     name: mackerel-plugin-tidb-process-list
