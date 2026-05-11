@@ -1,4 +1,3 @@
-version: 2
 builds:
   - binary: mackerel-plugin-tidb-process-list
     env:
