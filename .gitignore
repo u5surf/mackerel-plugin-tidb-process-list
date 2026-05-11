@@ -1,0 +1,29 @@
+# Binary
+mackerel-plugin-tidb-process-list
+*.exe
+
+# Go
+/vendor/
+
+# Test
+*.test
+*.out
+coverage.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
